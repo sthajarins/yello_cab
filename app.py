@@ -53,4 +53,6 @@ def table_data():
     return df.head(100).to_json(orient="records")
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    import os
+    port = int(os.environ.get("PORT", 5000))  # Render sets $PORT
+    app.run(host="0.0.0.0", port=port, debug=False)
