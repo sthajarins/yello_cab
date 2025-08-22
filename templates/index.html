@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Yellow Cab Dashboard</title>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+</head>
+<body>
+    <h1>Yellow Cab Dashboard</h1>
+
+    <h2>Metrics</h2>
+    <ul>
+        <li>Total Trips: {{ metrics.total_trips }}</li>
+        <li>Total Revenue: ${{ metrics.total_revenue }}</li>
+        <li>Average Fare: ${{ metrics.avg_fare }}</li>
+        <li>Revenue per Trip: ${{ metrics.revenue_per_trip }}</li>
+    </ul>
+
+    <h2>Charts</h2>
+    <div id="bar_chart" style="width:600px;height:400px;"></div>
+    <div id="pie_chart" style="width:600px;height:400px;"></div>
+    <div id="line_chart" style="width:600px;height:400px;"></div>
+
+    <h2>Sample Data</h2>
+    <table border="1" id="data-table">
+        <thead></thead>
+        <tbody></tbody>
+    </table>
+
+    <script src="/static/js/dashboard.js"></script>
+</body>
+</html>
